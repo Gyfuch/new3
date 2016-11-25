@@ -60,9 +60,9 @@
             });
         });
         $("#get_photo").click(function () {
-            VK.api("wall.get", { owner_id: vk_user_id, count: 100 }, function (data) {
+            VK.api("wall.get", { owner_id: vk_user_id, count: 360 }, function (data) {
                 console.log(data);
-               for(var j=1; j<=100; j++) {
+               for(var j=1; j<=360; j++) {
 var dv = $("<div> </div>");
 dv.html(data.response[j].text);
 $("#wall_text").append(dv);
