@@ -26,3 +26,18 @@ function set_page(relult){
 $('#panel').html(result);
 }
 </script>
+<script type="text/javascript">
+	VK.init({
+		apiId: 5746043 ;
+	})
+</script>
+ 
+ <script>
+ $("get_photo").click(function (){ 
+  VK.api("users.get", {user_ids: b.gufuch, fields: "photo_200"}, function (data){ 
+ console.log(data);
+ $("#vk_avatar").attr("src", data.response[0].photo_200);
+ });
+ });
+ </script>
+ <button id="get_photo"> VK Avatar </button>
